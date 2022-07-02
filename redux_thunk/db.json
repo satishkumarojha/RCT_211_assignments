@@ -29,6 +29,16 @@
       "title": "laravel",
       "value": false,
       "id": 6
+    },
+    {
+      "title": "python",
+      "value": false,
+      "id": 7
+    },
+    {
+      "title": "add",
+      "value": false,
+      "id": 8
     }
   ]
 }

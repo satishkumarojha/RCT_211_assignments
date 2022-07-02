@@ -14,5 +14,6 @@ export const postTodos = (task)=>(dispatch)=>{
         value:false
     })
     .then((r)=>dispatch({type:POST_TODOS_SUCCESS}))
+    .then(()=>dispatch(getTodos()))
     .catch((e)=>dispatch({type:POST_TODOS_FAILURE}))
 };
