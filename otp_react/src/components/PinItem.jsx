@@ -1,10 +1,10 @@
 import React from 'react'
 import { forwardRef } from 'react'
 
-export const PinItem = forwardRef(({handleChange},ref) => {
+export const PinItem = forwardRef(({handleChange,handleBackspace},ref) => {
     const handleOtpinputs = (e)=>{
         if(e.keyCode===8){
-
+            handleBackspace(e);
         }
         else{
             handleChange(e);
