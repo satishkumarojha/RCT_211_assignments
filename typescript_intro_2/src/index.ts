@@ -22,3 +22,22 @@ function getName({firstName,lastName}:combineName):string{
 let nameobj = {firstName:"satish",lastName:"ojha"};
 
 console.log(getName(nameobj));
+
+interface Address{
+    houseNumber:number;
+    street:string;
+    city:string;
+    state:string;
+    postalCode:number;
+    country:string;
+
+}
+
+interface PersonDetails{
+    phones:number[];
+    addresses:Address[];
+    email?:string;
+    firstName:string;
+    lastName:string;
+    middleName?:string;
+}
