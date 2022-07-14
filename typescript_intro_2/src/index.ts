@@ -42,8 +42,8 @@ interface PersonDetails{
     middleName?:string;
 }
 let arr:PersonDetails[]=[];
-function phoneBook(personalDetails){
-    arr.push(personalDetails);
+function phoneBook({phones,addresses,email,firstName,lastName,middleName}:PersonDetails){
+    arr.push({phones,addresses,email,firstName,lastName,middleName});
 }
 let obj ={phones:[345,890,67],
     addresses:[{houseNumber:42,street:"mhow",city:"pithampur",state:"mp",postalCode:345,country:"ind"}],

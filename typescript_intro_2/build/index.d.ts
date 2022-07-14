@@ -29,7 +29,7 @@ interface PersonDetails {
     middleName?: string;
 }
 declare let arr: PersonDetails[];
-declare function phoneBook(personalDetails: any): void;
+declare function phoneBook({ phones, addresses, email, firstName, lastName, middleName }: PersonDetails): void;
 declare let obj: {
     phones: number[];
     addresses: {
