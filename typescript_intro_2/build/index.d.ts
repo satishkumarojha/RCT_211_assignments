@@ -28,3 +28,18 @@ interface PersonDetails {
     lastName: string;
     middleName?: string;
 }
+declare let arr: PersonDetails[];
+declare function phoneBook(personalDetails: any): void;
+declare let obj: {
+    phones: number[];
+    addresses: {
+        houseNumber: number;
+        street: string;
+        city: string;
+        state: string;
+        postalCode: number;
+        country: string;
+    }[];
+    firstName: string;
+    lastName: string;
+};

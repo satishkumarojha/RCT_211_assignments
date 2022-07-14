@@ -9,4 +9,14 @@ function getName({ firstName, lastName }) {
 }
 let nameobj = { firstName: "satish", lastName: "ojha" };
 console.log(getName(nameobj));
+let arr = [];
+function phoneBook(personalDetails) {
+    arr.push(personalDetails);
+}
+let obj = { phones: [345, 890, 67],
+    addresses: [{ houseNumber: 42, street: "mhow", city: "pithampur", state: "mp", postalCode: 345, country: "ind" }],
+    firstName: "satish",
+    lastName: "ojha" };
+phoneBook(obj);
+console.log(arr);
 //# sourceMappingURL=index.js.map
