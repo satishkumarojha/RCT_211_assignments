@@ -43,6 +43,7 @@ interface PersonDetails{
 }
 let arr:PersonDetails[]=[];
 function phoneBook({phones,addresses,email,firstName,lastName,middleName}:PersonDetails){
+    
     arr.push({phones,addresses,email,firstName,lastName,middleName});
 }
 let obj ={phones:[345,890,67],
