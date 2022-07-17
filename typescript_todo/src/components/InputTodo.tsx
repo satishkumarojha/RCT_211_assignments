@@ -16,15 +16,23 @@ export const InputTodo = () => {
       tasks:info,
       tstatus:false,
     }
-    setTodo([...todo,payload]);
     setInfo("");
+    setTodo([...todo,payload]);
+   
 }
-console.log(todo);
+const toggleTodo = (val:string)=>{
+  setTodo([...todo.map((e)=>{
+    return (e.tasks==val?{...e,tstatus:!e.tstatus}:e)
+  })]);
+}
+const deleteTodo = (val:string)=>{
+setTodo(todo.filter((e)=>e.tasks!=val));
+}
   return (
     <div>
-      <input type="text" placeholder='Enter Input' name='inputtodo' onChange={handleChange} />
+      <input type="text" value={info} placeholder='Enter Input' name='inputtodo' onChange={handleChange} />
       <button onClick={handleAdd}>Add</button>
-      {todo?.map((ele)=><SingleTodo title={ele.tasks} status={ele.tstatus}/>)}
+      {todo?.map((ele)=><SingleTodo key={ele.tasks} title={ele.tasks} status={ele.tstatus} toggleTodo={toggleTodo} deleteTodo={deleteTodo}/>)}
       </div>
   )
 }
